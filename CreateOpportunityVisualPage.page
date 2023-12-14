@@ -1,0 +1,17 @@
+<apex:page standardController = "Opportunity">
+ <apex:form>
+  <apex:pageBlock title = "Opportunity Object Data">
+    <apex:pageBlockSection>
+          <apex:inputField value = "{!Opportunity.Name}" />
+          <apex:inputField value = "{!Opportunity.StageName}" />
+          <apex:inputField value = "{!Opportunity.CloseDate}" />
+          <apex:inputField value = "{!Opportunity.Case_Reason__c}" />
+          <apex:inputField value= "{!Opportunity.Account.Name}"/>
+    </apex:pageBlockSection>
+    <apex:pageBlockButtons>
+            <apex:commandButton action = "{!save}" value ="save"/>
+        </apex:pageBlockButtons>
+
+  </apex:pageBlock>
+</apex:form>
+</apex:page>
